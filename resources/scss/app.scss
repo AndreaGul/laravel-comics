@@ -1,10 +1,40 @@
 @import "~bootstrap/scss/bootstrap";
 @import "_partials/reset.scss";
+@import "_partials/variables.scss";
 
-body {
+.welcome-main {
     //background-image: url("../img/duck.jpg");
-
+    background-color: $primary-light-black;
     h1 {
-        color: blue;
+        color: $primary-light-black;
+    }
+    .cards-container {
+        padding: 55px 0;
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .card-container {
+                width: calc((100% - (30px * 5)) / 6);
+
+                .img-container {
+                    aspect-ratio: 1/1;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-position: top;
+                        object-fit: cover;
+                    }
+                }
+
+                h3 {
+                    text-align: center;
+                    color: white;
+                    margin: 20px 0;
+                }
+            }
+        }
     }
 }
